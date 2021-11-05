@@ -1,0 +1,58 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/location_settings"
+        app:iconSpaceReserved="false">
+
+        <SeekBarPreference
+            app:key="radius"
+            app:title="@string/radius"
+            app:summary="@string/settings_radius_desc"
+            android:defaultValue="500"
+            android:min="5"
+            android:max="25000"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/time_settings"
+        app:iconSpaceReserved="false"
+        >
+
+        <com.example.connectmap.preferences.DatePreference
+            android:title="@string/date_origo"
+            android:key="date_preference"
+            android:defaultValue="2014-08-01"
+            app:summary="@string/date_origo_desc"
+            app:iconSpaceReserved="false"/>
+
+        <SeekBarPreference
+            app:key="time_interval"
+            app:title="@string/time_interval"
+            app:summary="@string/settings_time_interval_desc"
+            android:defaultValue="24"
+            android:min="1"
+            android:max="168"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/back_to_def"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="reset_btn"
+            android:title="@string/rst_settings"
+            android:summary="@string/settings_rst_desc"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
